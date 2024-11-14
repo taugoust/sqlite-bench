@@ -6,7 +6,7 @@ gen-sql: gen-sql.py
 	python3 $<
 
 $(bin): sqlite-bench.c
-	gcc -O3 -lsqlite3 -o $@ $<
+	$(CC) -O3 -lsqlite3 -o $@ $<
 
 clean:
 	rm -rf *~ *.o *.sql
